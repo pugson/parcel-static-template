@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Parcel</title>
+    <meta name="description" content="Static template built with Parcel." />
+    <meta name="author" content="@pugson" />
+
+    <link rel="stylesheet" href="./styles/main.scss" />
+  </head>
+
+  <body>
+    <!-- INLINE SVG SUPPORT -->
+    <icon src="check.svg" class="icon"></icon>
+    <!-- SIMPLE HTML COMPONENTS -->
+    <module href="/components/header.html">your custom content.</module>
+
+    <h2>
+      This site was built with Parcel. Go ahead and start your development.
+    </h2>
+    <!-- SIMPLE CONTENT REPEATING FOR PROTOTYPING -->
+    <ol>
+      <li each="3">This is a repeated list item.</li>
+    </ol>
+
+    <!-- AUTOMATIC .WEBP GENERATION -->
+    <img
+      src="./assets/pug.jpeg"
+      srcset="./assets/pug@2x.jpeg 2x"
+      width="350"
+      alt="Pug sitting on a couch looking at a computer."
+    />
+
+    <!-- AUTOMATIC EXTERNAL LINK PROTECTION FOR TARGET BLANK -->
+    <a href="https://github.com/pugson/parcel-static-template" target="_blank"
+      >This template on GitHub</a
+    >
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

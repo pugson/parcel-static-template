@@ -1,0 +1,18 @@
+{
+  "plugins": {
+    "posthtml-modules": {
+      "root": "./src"
+    },
+    "posthtml-each": {},
+    "posthtml-noopener": {},
+    "posthtml-obfuscate": {},
+    "posthtml-inline-svg": {
+      "root": "src/assets/icons",
+      "tag": "icon",
+      "attr": "src"
+    },
+    "posthtml-webp": {
+      "replaceExtension": true
+    }
+  }
+}
