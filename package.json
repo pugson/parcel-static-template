@@ -14,7 +14,7 @@
     "posthtml-webp": "https://github.com/pugson/posthtml-webp"
   },
   "scripts": {
-    "start": "parcel ./src/index.html --https",
+    "start": "'yarn webp' && parcel ./src/index.html --https",
     "webp": "node ./tools/webp-converter.js",
     "optimize": "node ./tools/image-optimizer.js",
     "build": "NODE_ENV=production 'yarn optimize' && parcel build ./src/index.html --no-source-maps --public-url ./"
