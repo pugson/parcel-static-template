@@ -1,5 +1,3 @@
-# In progress, not ready for release yet.
-
 # parcel-static-template
 
 Start a simple static site with components.
