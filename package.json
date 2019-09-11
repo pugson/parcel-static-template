@@ -1,5 +1,8 @@
 {
   "devDependencies": {
+    "chokidar": "^3.0.2",
+    "concurrently": "^4.1.2",
+    "fs": "^0.0.1-security",
     "imagemin": "^7.0.0",
     "imagemin-jpegtran": "^6.0.0",
     "imagemin-pngquant": "^8.0.0",
@@ -10,11 +13,12 @@
     "posthtml-inline-svg": "^0.0.3",
     "posthtml-modules": "^0.4.2",
     "posthtml-noopener": "^1.0.3",
-    "posthtml-obfuscate": "^0.1.5",
-    "posthtml-webp": "https://github.com/pugson/posthtml-webp"
+    "posthtml-obfuscate": "^0.1.5"
   },
   "scripts": {
-    "start": "'yarn webp' && parcel ./src/index.html --https",
+    "start": "concurrently 'yarn optimize' 'yarn webp' 'yarn watch' 'yarn dev'",
+    "dev": "parcel ./src/*.html --https",
+    "watch": "node ./tools/watcher.js",
     "webp": "node ./tools/webp-converter.js",
     "optimize": "node ./tools/image-optimizer.js",
     "build": "NODE_ENV=production 'yarn optimize' && parcel build ./src/index.html --no-source-maps --public-url ./"
@@ -27,5 +31,7 @@
   "author": "Wojtek Witkowski <hi@wojtek.im>",
   "license": "MIT",
   "private": false,
-  "dependencies": {}
+  "dependencies": {
+    "posthtml-webp": "https://github.com/pugson/posthtml-webp"
+  }
 }
