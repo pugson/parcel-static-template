@@ -13,7 +13,8 @@
     "posthtml-inline-svg": "^0.0.3",
     "posthtml-modules": "^0.4.2",
     "posthtml-noopener": "^1.0.3",
-    "posthtml-obfuscate": "^0.1.5"
+    "posthtml-obfuscate": "^0.1.5",
+    "posthtml-webp": "https://github.com/pugson/posthtml-webp"
   },
   "scripts": {
     "start": "concurrently 'yarn optimize' 'yarn webp' 'yarn watch' 'yarn dev'",
@@ -21,7 +22,7 @@
     "watch": "node ./tools/watcher.js",
     "webp": "node ./tools/webp-converter.js",
     "optimize": "node ./tools/image-optimizer.js",
-    "build": "NODE_ENV=production 'yarn optimize' && parcel build ./src/index.html --no-source-maps --public-url ./"
+    "build": "NODE_ENV=production node ./tools/image-optimizer.js && node ./tools/webp-converter.js && parcel build ./src/index.html --no-source-maps --public-url ./"
   },
   "name": "parcel-static-template",
   "version": "1.0.0",
@@ -31,7 +32,5 @@
   "author": "Wojtek Witkowski <hi@wojtek.im>",
   "license": "MIT",
   "private": false,
-  "dependencies": {
-    "posthtml-webp": "https://github.com/pugson/posthtml-webp"
-  }
+  "dependencies": {}
 }
