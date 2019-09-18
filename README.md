@@ -15,7 +15,7 @@ Start a simple static site with components.
 - 🔁️ Easily repeat blocks for prototyping.
 - 🔒️ Automatically add `noopener noreferrer` to links to prevent [this vulnerability](https://developers.google.com/web/tools/lighthouse/audits/noopener).
 
-### Quick start for your own site
+## Quick start for your own site
 
 | Deploy to Netlify & fork to a new repo 👉️ | [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/pugson/parcel-static-template) |
 | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -26,3 +26,8 @@ Start a simple static site with components.
 
 ## Deploying
 Run `yarn build` to create an optimized production build in `/dist` which can be deployed as a website.
+
+----
+
+# To-do
+- [ ] Automatically set `loading="lazy"` for image elements.
